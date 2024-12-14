@@ -1,9 +1,9 @@
-# distributed-tracing-local
+### Docker Compose Instructions
 
---Execute from location where docker-compost.yml
+1. **Build and Start Services**  
+   Run the following command to build the Docker images and start the containers:  
+   ```bash
+   docker-compose up --build
+   docker-compose down
 
-docker-compose up --build 
 
---To bring it down
-
-docker-compose down
