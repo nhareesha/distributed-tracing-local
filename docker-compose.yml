@@ -37,7 +37,7 @@ services:
     depends_on:
       - jaeger
     environment:
-      # - OTEL_EXPORTER_JAEGER_AGENT_HOST=jaeger  # Set Jaeger agent for Spark
+      # - OTEL_EXPORTER_JAEGER_AGENT_HOST=jaeger  # Jaeger agent for Spark
       # - OTEL_EXPORTER_JAEGER_AGENT_PORT=5775
       # - OTEL_EXPORTER_OTLP_ENDPOINT=grpc://jaeger:14250  # OTLP endpoint for Jaeger
       - OTEL_EXPORTER_OTLP_ENDPOINT=http://jaeger:4317  # OTLP endpoint for Jaeger

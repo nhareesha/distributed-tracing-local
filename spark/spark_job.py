@@ -8,7 +8,7 @@ from opentelemetry.exporter.otlp.proto.grpc.trace_exporter import OTLPSpanExport
 from opentelemetry.sdk.resources import SERVICE_NAME, Resource
 
 
-# Initialize Spark session
+# Init Spark session
 spark = SparkSession.builder.appName("SparkTracingExample").getOrCreate()
 
 # Initialize OpenTelemetry tracer with Jaeger exporter
@@ -18,15 +18,15 @@ tracer_provider = TracerProvider(
 
 
 # Configure OTLP exporter for Jaeger
-# otlp_exporter = OTLPSpanExporter(endpoint="grpc://jaeger:14250")  # 172.19.0.2 Replace with your OTLP endpoint
-otlp_exporter = OTLPSpanExporter(endpoint="http://jaeger:4317")  # 172.19.0.2 Replace with your OTLP endpoint
+# otlp_exporter = OTLPSpanExporter(endpoint="grpc://jaeger:14250")  # 172.19.0.2 Replace with  OTLP endpoint
+otlp_exporter = OTLPSpanExporter(endpoint="http://jaeger:4317")  # 172.19.0.2 Replace with OTLP endpoint
 
 span_processor = BatchSpanProcessor(otlp_exporter)
 tracer_provider.add_span_processor(span_processor)
 
 
 
-# Initialize MemorySpanExporter (for debugging traces in memory)
+# Init MemorySpanExporter (for debugging traces in memory)
 memory_exporter = InMemorySpanExporter()
 
 # Set up the BatchSpanProcessor with JaegerExporter and MemorySpanExporter
