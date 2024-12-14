@@ -7,5 +7,8 @@
 2. **To Bring down the service**
    ```bash   
    docker-compose down
+3. **Jaeger UI location**
+   ```bash
+   http://localhost:16686/
 
 
