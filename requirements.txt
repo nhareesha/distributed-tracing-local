@@ -1,0 +1,6 @@
+# requirements.txt
+opentelemetry-api==1.15.0
+opentelemetry-sdk==1.15.0
+opentelemetry-instrumentation==0.39b0
+opentelemetry-exporter-jaeger==1.15.0
+
